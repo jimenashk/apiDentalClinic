@@ -29,4 +29,4 @@ http://localhost:8080/docs/index.html#/
 ```
 
 ## Author
-Jimena Horbacovsky - Developer
+[Jimena Horbacovsky](linkedin.com/in/jimenashk) - Developer
