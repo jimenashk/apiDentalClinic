@@ -23,9 +23,8 @@ go run main.go
 
 ## Documentation
 
-You can access the Swagger documentation by visiting the following URL:
+You can access the Swagger documentation by visiting the following [URL](http://localhost:8080/docs/index.html#/).
 ```
-[URL](http://localhost:8080/docs/index.html#/)
 ```
 
 ## Author
