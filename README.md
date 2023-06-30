@@ -26,8 +26,9 @@ go run main.go
 
 ## Documentation
 
-Access to the branch "documentation" for all the Swagger documentation. 📚
-Also available by visiting the following [URL](http://localhost:8080/docs/index.html#/). 🌐
+- Access to the branch "documentation" for all the Swagger documentation. 📚
+- Also available by visiting the following [URL](http://localhost:8080/docs/index.html#/). 🌐
+
 ```
 Make sure you check the postman_collection and the postman_test_run files also located in the root directory of the project. 💡  
 ```
