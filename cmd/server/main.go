@@ -1,16 +1,5 @@
 package main
 
-/*
-@title Api Dental Clinic by Jimena Horbacovsky
-@version 1.0
-@description API of a dental clinic, where you can list/ add/ delete/ update or search by ID Patients, Dentists and Appointments
-@termsOfService  https://github.com/jimena_shk
-@contact.name API Support
-@contact.url https://github.com/jimena_shk
-@license.name Apache 2.0
-@license.url https://www.apache.org/licenses/LICENSE-2.0.html
-
-*/
 import (
 	"database/sql"
 	"fmt"
@@ -18,7 +7,6 @@ import (
 	"os"
 
 	"apiDentalClinic/cmd/server/handler"
-	"apiDentalClinic/docs"
 	"apiDentalClinic/internal/appointments"
 	"apiDentalClinic/internal/dentist"
 	"apiDentalClinic/internal/patient"
@@ -28,8 +16,7 @@ import (
 	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/joho/godotenv"
-	swaggerFiles "github.com/swaggo/files"
-	ginSwagger "github.com/swaggo/gin-swagger"
+	
 )
 
 func main() {
@@ -61,8 +48,6 @@ func main() {
 
 	r := gin.Default()
 
-	docs.SwaggerInfo.Host = os.Getenv("HOST")
-	r.GET("/docs/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	r.GET("/ping", func(c *gin.Context) { c.String(200, "pong") })
 
 	dentists := r.Group("/dentists")
