@@ -1,0 +1,820 @@
+{
+	"info": {
+		"_postman_id": "b49a2645-629a-43f8-bc5f-2b8f3f3a1d75",
+		"name": "API_dentalClinic_go",
+		"description": "Description:\n\nAPI for a dental clinic, where you can list/ add/ delete/ update or search by ID Patients, Dentists and Appointments.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18051439"
+	},
+	"item": [
+		{
+			"name": "dentist",
+			"item": [
+				{
+					"name": "get list dentist",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "jimena-shk",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "TOKEN",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/dentists",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/dentists/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentists",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post dentist",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "jimena-shk",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "TOKEN",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"license\": \"DENT020\",\r\n  \"lastname\": \"Gabriel\",\r\n  \"name\": \"Alonzo\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/dentists",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentists"
+							],
+							"query": [
+								{
+									"key": "license",
+									"value": "DENT0012",
+									"disabled": true
+								},
+								{
+									"key": "lastname",
+									"value": "Calvo",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Daniel",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update dentist",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "jimena-shk",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "TOKEN",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"license\": \"DENT011\",\r\n  \"id\": 0,\r\n  \"lastname\": \"Sanchez\",\r\n  \"name\": \"Romina\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/dentists/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentists",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch dentist",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"license\": \"DENT014\",\r\n  \"id\": 0,\r\n  \"lastname\": \"Perez\",\r\n  \"name\": \"Sergio\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/dentists/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentists",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete dentist",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"license\": \"DENT014\",\r\n  \"id\": 0,\r\n  \"lastname\": \"Perez\",\r\n  \"name\": \"Sergio\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/dentists/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentists",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list patient",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "jimena-shk",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "TOKEN",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "patient",
+			"item": [
+				{
+					"name": "list patient",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "jimena-shk",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "TOKEN",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/dentists",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dentists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/patients/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post patient",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "jimena-shk",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "TOKEN",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dateup\": \"05/10/2021\",\r\n  \"dni\": \"36526324\",\r\n  \"address\": \"9 de julio 884\",\r\n  \"id\": 0,\r\n  \"lastname\": \"Lopez\",\r\n  \"name\": \"Tatiana\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/patients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients"
+							],
+							"query": [
+								{
+									"key": "license",
+									"value": "DENT0012",
+									"disabled": true
+								},
+								{
+									"key": "lastname",
+									"value": "Calvo",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Daniel",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update patient",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "jimena-shk",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "TOKEN",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dateup\": \"21/06/2021\",\r\n  \"dni\": \"16523659\",\r\n  \"address\": \"Cepeda 1254\",\r\n  \"id\": 0,\r\n  \"lastname\": \"Bustamante\",\r\n  \"name\": \"Camila\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/patients/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch patient",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dateup\": \"02/11/2021\",\r\n  \"dni\": \"\",\r\n  \"address\": \"Viamonte 2365\",\r\n  \"id\": 0,\r\n  \"lastname\": \"Burgos\",\r\n  \"name\": \"Marcela\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/patients/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete patient",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"license\": \"DENT014\",\r\n  \"id\": 0,\r\n  \"lastname\": \"Perez\",\r\n  \"name\": \"Sergio\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/patients/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"patients",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "appointment",
+			"item": [
+				{
+					"name": "list appointments",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "jimena-shk",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "TOKEN",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "query",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/appointments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/appointments/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointments",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post appointment",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "jimena-shk",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "TOKEN",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dateup\": \"21/08/2023\",\r\n  \"dentistid\": 16,\r\n  \"description\": \"lorem ipsum\",\r\n  \"hour\": \"15:45\",\r\n  \"patientid\": 15\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/appointments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointments"
+							],
+							"query": [
+								{
+									"key": "license",
+									"value": "DENT0012",
+									"disabled": true
+								},
+								{
+									"key": "lastname",
+									"value": "Calvo",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Daniel",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post appointment License & DNI",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "jimena-shk",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "TOKEN",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dateup\": \"06/07/2022\",\r\n  \"description\": \"lorem ipsum\",\r\n  \"dni\": \"236458965\",\r\n  \"license\": \"DENT002\",\r\n  \"hour\": \"10:45\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/appointments/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointments",
+								"post"
+							],
+							"query": [
+								{
+									"key": "license",
+									"value": "DENT0012",
+									"disabled": true
+								},
+								{
+									"key": "lastname",
+									"value": "Calvo",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Daniel",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update appointment",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "jimena-shk",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "TOKEN",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dateup\": \"23/09/2022\",\r\n  \"dentistid\": 10,\r\n  \"description\": \"lorem ipsum\",\r\n  \"hour\": \"14:25\",\r\n  \"patientid\": 8\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/appointments/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointments",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch appointment",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dateup\": \"23/05/2021\",\r\n  \"dentistid\": 10,\r\n  \"description\": \"lorem ipsum\",\r\n  \"hour\": \"17:45\",\r\n  \"patientid\": 8\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/appointments/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointments",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete appointment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"license\": \"DENT014\",\r\n  \"id\": 0,\r\n  \"lastname\": \"Perez\",\r\n  \"name\": \"Sergio\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/appointments/36",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointments",
+								"36"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by DNI",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/appointments/?dni=23659856",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"appointments",
+								""
+							],
+							"query": [
+								{
+									"key": "dni",
+									"value": "23659856"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "TOKEN",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "jimena-shk",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

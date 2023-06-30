@@ -1,0 +1,484 @@
+{
+	"id": "f1b4533a-aad2-49b6-94e5-69af4bc0b22a",
+	"name": "API_dentalClinic_go",
+	"timestamp": "2023-06-29T01:14:47.820Z",
+	"collection_id": "18051439-b49a2645-629a-43f8-bc5f-2b8f3f3a1d75",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-06-29T01:14:45.928Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "a19d2eba-3bf2-4186-b4b2-aaf2b4756ba9",
+			"name": "get list dentist",
+			"url": "http://localhost:8080/dentists?TOKEN=AUTH_VALUE",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "92a0fa92-9f0d-4ee8-bf84-aa642feabfb4",
+			"name": "get by ID",
+			"url": "http://localhost:8080/dentists/9",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2fefbb83-63a2-49b7-98d9-5714c9890988",
+			"name": "post dentist",
+			"url": "http://localhost:8080/dentists",
+			"time": 10,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a948c339-73d2-4aa5-a732-d18e785c0f92",
+			"name": "update dentist",
+			"url": "http://localhost:8080/dentists/14",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d0d0a524-db0f-4224-a841-624fcc863527",
+			"name": "patch dentist",
+			"url": "http://localhost:8080/dentists/14",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fb953322-2522-401e-b909-b86098a3c33c",
+			"name": "delete dentist",
+			"url": "http://localhost:8080/dentists/4",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0802d85e-666a-4b33-81d0-b66d042748d2",
+			"name": "list patient",
+			"url": "http://localhost:8080/patients?TOKEN=AUTH_VALUE",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "430433c1-94b9-4eb5-9fb3-8b9c8342afc9",
+			"name": "list patient",
+			"url": "http://localhost:8080/dentists?TOKEN=AUTH_VALUE",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ca395b7c-cad6-4e2b-9c11-3bb2de0e9893",
+			"name": "get by ID",
+			"url": "http://localhost:8080/patients/8",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "88ee6b6a-5d5f-41e9-9a38-b698407e1c29",
+			"name": "post patient",
+			"url": "http://localhost:8080/patients",
+			"time": 7,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "650aaae0-8e54-451a-92d9-28d8f668bfd6",
+			"name": "update patient",
+			"url": "http://localhost:8080/patients/13",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				12
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "77b71ca3-b815-48fa-85f7-3c98428e195f",
+			"name": "patch patient",
+			"url": "http://localhost:8080/patients/5",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e58337ba-d2d7-4653-be8f-15ec0e9fc667",
+			"name": "delete patient",
+			"url": "http://localhost:8080/patients/13",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8da82e5e-13bb-4a32-94de-2aaa3c332a3f",
+			"name": "list appointments",
+			"url": "http://localhost:8080/appointments?TOKEN=AUTH_VALUE",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "37934826-c7c9-4623-a883-efce7a62104f",
+			"name": "get by ID",
+			"url": "http://localhost:8080/appointments/7",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8de313ee-ccc5-450a-bb1b-29d31b798c26",
+			"name": "post appointment",
+			"url": "http://localhost:8080/appointments",
+			"time": 7,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1bd3375d-5d38-40fe-ab9c-4e05286217ff",
+			"name": "post appointment License & DNI",
+			"url": "http://localhost:8080/appointments/post",
+			"time": 9,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "be44e620-d099-4ffa-a266-56b846dfbbc1",
+			"name": "update appointment",
+			"url": "http://localhost:8080/appointments/10",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				12
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f5f89b08-b658-42c2-80ef-4ae7637044d3",
+			"name": "patch appointment",
+			"url": "http://localhost:8080/appointments/10",
+			"time": 29,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				29
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b06f12da-e9d6-4114-894d-461b9b761c0d",
+			"name": "delete appointment",
+			"url": "http://localhost:8080/appointments/36",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7225e68b-2e00-49fa-91a4-6a8653423ced",
+			"name": "get by DNI",
+			"url": "http://localhost:8080/appointments/?dni=23659856",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 155,
+	"collection": {
+		"requests": [
+			{
+				"id": "a19d2eba-3bf2-4186-b4b2-aaf2b4756ba9",
+				"method": "GET"
+			},
+			{
+				"id": "92a0fa92-9f0d-4ee8-bf84-aa642feabfb4",
+				"method": "GET"
+			},
+			{
+				"id": "2fefbb83-63a2-49b7-98d9-5714c9890988",
+				"method": "POST"
+			},
+			{
+				"id": "a948c339-73d2-4aa5-a732-d18e785c0f92",
+				"method": "PUT"
+			},
+			{
+				"id": "d0d0a524-db0f-4224-a841-624fcc863527",
+				"method": "PATCH"
+			},
+			{
+				"id": "fb953322-2522-401e-b909-b86098a3c33c",
+				"method": "DELETE"
+			},
+			{
+				"id": "0802d85e-666a-4b33-81d0-b66d042748d2",
+				"method": "GET"
+			},
+			{
+				"id": "430433c1-94b9-4eb5-9fb3-8b9c8342afc9",
+				"method": "GET"
+			},
+			{
+				"id": "ca395b7c-cad6-4e2b-9c11-3bb2de0e9893",
+				"method": "GET"
+			},
+			{
+				"id": "88ee6b6a-5d5f-41e9-9a38-b698407e1c29",
+				"method": "POST"
+			},
+			{
+				"id": "650aaae0-8e54-451a-92d9-28d8f668bfd6",
+				"method": "PUT"
+			},
+			{
+				"id": "77b71ca3-b815-48fa-85f7-3c98428e195f",
+				"method": "PATCH"
+			},
+			{
+				"id": "e58337ba-d2d7-4653-be8f-15ec0e9fc667",
+				"method": "DELETE"
+			},
+			{
+				"id": "8da82e5e-13bb-4a32-94de-2aaa3c332a3f",
+				"method": "GET"
+			},
+			{
+				"id": "37934826-c7c9-4623-a883-efce7a62104f",
+				"method": "GET"
+			},
+			{
+				"id": "8de313ee-ccc5-450a-bb1b-29d31b798c26",
+				"method": "POST"
+			},
+			{
+				"id": "1bd3375d-5d38-40fe-ab9c-4e05286217ff",
+				"method": "POST"
+			},
+			{
+				"id": "be44e620-d099-4ffa-a266-56b846dfbbc1",
+				"method": "PUT"
+			},
+			{
+				"id": "f5f89b08-b658-42c2-80ef-4ae7637044d3",
+				"method": "PATCH"
+			},
+			{
+				"id": "b06f12da-e9d6-4114-894d-461b9b761c0d",
+				"method": "DELETE"
+			},
+			{
+				"id": "7225e68b-2e00-49fa-91a4-6a8653423ced",
+				"method": "GET"
+			}
+		]
+	}
+}
