@@ -20,15 +20,6 @@ func NewAppointmentHandler(s appointments.Service) *appointmenthandler {
 	return &appointmenthandler{s: s}
 }
 
-// ListAppointments godoc
-// @Summary Get All Appointments
-// @Tags Appointments
-// @Description Get Appointments
-// @Accept json
-// @Produce json
-// @Success 200 {object} web.response
-// @Failure 400 {object} web.response
-// @Router /appointments [get]
 func (h *appointmenthandler) GetAll() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		appointments, _ := h.s.ReadAll()
@@ -39,18 +30,6 @@ func (h *appointmenthandler) GetAll() gin.HandlerFunc {
 	}
 }
 
-// PostAppointments godoc
-// @Summary Post Appointments
-// @Tags Appointments
-// @Description Post a Appointments
-// @Accept json
-// @Produce json
-// @Param token header string true "token"
-// @Param dentist body dto.AppointmentsInsert true "Appointments to data"
-// @Success 201 {object} web.response
-// @Failure 401 {object} web.response
-// @Failure 400 {object} web.response
-// @Router /appointments [post]
 func (h *appointmenthandler) Post() gin.HandlerFunc {
 	return func(c *gin.Context) {
 
@@ -88,16 +67,6 @@ func (h *appointmenthandler) Post() gin.HandlerFunc {
 	}
 }
 
-// AppointmentsbyID godoc
-// @Summary Get Appointments by ID
-// @Tags Appointments
-// @Description Get Appointments
-// @Accept json
-// @Produce json
-// @Param id path int true "Appointments ID"
-// @Success 200 {object} web.response
-// @Failure 404 {object} web.response
-// @Router /appointments/{id} [get]
 func (h *appointmenthandler) GetByID() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		idParam := c.Param("id")
@@ -115,20 +84,6 @@ func (h *appointmenthandler) GetByID() gin.HandlerFunc {
 	}
 }
 
-// UpdateAppointment godoc
-// @Summary Put Appointments
-// @Tags Appointments
-// @Description Put a Appointments
-// @Accept json
-// @Produce json
-// @Param token header string true "token"
-// @Param dentist body dto.AppointmentInsert true "Appointments to data"
-// @Param id path int true "Appointments ID"
-// @Success 200 {object} web.response
-// @Failure 401 {object} web.response
-// @Failure 400 {object} web.response
-// @Failure 409 {object} web.response
-// @Router /appointments/{id} [put]
 func (h *appointmenthandler) Put() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		token := c.GetHeader("TOKEN")
@@ -167,20 +122,6 @@ func (h *appointmenthandler) Put() gin.HandlerFunc {
 	}
 }
 
-// UpdateAppointment godoc
-// @Summary Patch Appointments
-// @Tags Appointments
-// @Description Patch a Appointments
-// @Accept json
-// @Produce json
-// @Param token header string true "token"
-// @Param dentist body dto.AppointmentInsert true "Appointments to data"
-// @Param id path int true "Appointments ID"
-// @Success 200 {object} web.response
-// @Failure 401 {object} web.response
-// @Failure 400 {object} web.response
-// @Failure 409 {object} web.response
-// @Router /appointments/{id} [patch]
 func (h *appointmenthandler) Patch() gin.HandlerFunc {
 	type AppointmentRequest struct {
 		PatientId   int    `json:"patientid,omitempty"`
@@ -227,18 +168,6 @@ func (h *appointmenthandler) Patch() gin.HandlerFunc {
 	}
 }
 
-// PostAppointmentsWithLicenseAndDNI godoc
-// @Summary PostAppointmentsWithLicenseAndDNI Appointments
-// @Tags Appointments
-// @Description Post a Appointments
-// @Accept json
-// @Produce json
-// @Param token header string true "token"
-// @Param dentist body dto.AppointmentPost true "Appointments to data"
-// @Success 201 {object} web.response
-// @Failure 401 {object} web.response
-// @Failure 400 {object} web.response
-// @Router /appointments/post [post]
 func (h *appointmenthandler) PostxLicenseAndDni() gin.HandlerFunc {
 	return func(c *gin.Context) {
 
@@ -274,18 +203,6 @@ func (h *appointmenthandler) PostxLicenseAndDni() gin.HandlerFunc {
 	}
 }
 
-// DeleteAppointment godoc
-// @Summary Delete Appointments
-// @Tags Appointments
-// @Description Delete a Appointments
-// @Accept json
-// @Produce json
-// @Param token header string true "token"
-// @Param id path int true "Appointments ID"
-// @Success 200 {object} web.response
-// @Failure 401 {object} web.response
-// @Failure 400 {object} web.response
-// @Router /appointments/{id} [delete]
 func (h *appointmenthandler) Delete() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		token := c.GetHeader("Token")
@@ -313,16 +230,6 @@ func (h *appointmenthandler) Delete() gin.HandlerFunc {
 	}
 }
 
-// AppointmentsbyID godoc
-// @Summary Get Appointments by ID
-// @Tags Appointments
-// @Description Get Appointments
-// @Accept json
-// @Produce json
-// @Param dni query string false "DNI"
-// @Success 200 {object} web.response
-// @Failure 404 {object} web.response
-// @Router /appointments/dni [get]
 func (h *appointmenthandler) GetByDNI() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		dniParam := c.Param("dni")

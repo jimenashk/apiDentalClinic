@@ -20,15 +20,6 @@ func NewPatientHandler(s patient.Service) *patienthandler {
 	return &patienthandler{s: s}
 }
 
-// ListPatient godoc
-// @Summary Get All Patient
-// @Tags Patient
-// @Description Get Patient
-// @Accept json
-// @Produce json
-// @Success 200 {object} web.response
-// @Failure 400 {object} web.response
-// @Router /patients [get]
 func (h *patienthandler) GetAll() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		patients, _ := h.s.ReadAll()
@@ -39,16 +30,6 @@ func (h *patienthandler) GetAll() gin.HandlerFunc {
 	}
 }
 
-// PatientbyID godoc
-// @Summary Get Patient by ID
-// @Tags Patient
-// @Description Get Patient
-// @Accept json
-// @Produce json
-// @Param id path int true "Patient ID"
-// @Success 200 {object} web.response
-// @Failure 404 {object} web.response
-// @Router /patients/{id} [get]
 func (h *patienthandler) GetByID() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		idParam := c.Param("id")
@@ -67,18 +48,6 @@ func (h *patienthandler) GetByID() gin.HandlerFunc {
 
 }
 
-// PostPatient godoc
-// @Summary Post Patient
-// @Tags Patient
-// @Description Post a Patient
-// @Accept json
-// @Produce json
-// @Param token header string true "token"
-// @Param dentist body domain.Patient true "Patient to data"
-// @Success 201 {object} web.response
-// @Failure 401 {object} web.response
-// @Failure 400 {object} web.response
-// @Router /patients [post]
 func (h *patienthandler) Post() gin.HandlerFunc {
 	return func(c *gin.Context) {
 
@@ -116,18 +85,6 @@ func (h *patienthandler) Post() gin.HandlerFunc {
 	}
 }
 
-// DeletePatient godoc
-// @Summary Delete Patient
-// @Tags Patient
-// @Description Delete a Patient
-// @Accept json
-// @Produce json
-// @Param token header string true "token"
-// @Param id path int true "Patient ID"
-// @Success 200 {object} web.response
-// @Failure 401 {object} web.response
-// @Failure 400 {object} web.response
-// @Router /patients/{id} [delete]
 func (h *patienthandler) Delete() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		token := c.GetHeader("Token")
@@ -155,20 +112,6 @@ func (h *patienthandler) Delete() gin.HandlerFunc {
 	}
 }
 
-// UpdatePatient godoc
-// @Summary Put Patient
-// @Tags Patient
-// @Description Put a Patient
-// @Accept json
-// @Produce json
-// @Param token header string true "token"
-// @Param dentist body domain.Patient true "Patient to data"
-// @Param id path int true "Patient ID"
-// @Success 200 {object} web.response
-// @Failure 401 {object} web.response
-// @Failure 400 {object} web.response
-// @Failure 409 {object} web.response
-// @Router /patients/{id} [put]
 func (h *patienthandler) Put() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		token := c.GetHeader("TOKEN")
@@ -207,20 +150,6 @@ func (h *patienthandler) Put() gin.HandlerFunc {
 	}
 }
 
-// UpdatePatient godoc
-// @Summary Patch Patient
-// @Tags Patient
-// @Description Patch a Patient
-// @Accept json
-// @Produce json
-// @Param token header string true "token"
-// @Param dentist body domain.Patient true "Patient to data"
-// @Param id path int true "Patient ID"
-// @Success 200 {object} web.response
-// @Failure 401 {object} web.response
-// @Failure 400 {object} web.response
-// @Failure 409 {object} web.response
-// @Router /patients/{id} [patch]
 func (h *patienthandler) Patch() gin.HandlerFunc {
 	type Request struct {
 		Name     string `json:"name,omitempty"`
@@ -267,7 +196,6 @@ func (h *patienthandler) Patch() gin.HandlerFunc {
 	}
 }
 
-// validateEmptys valida que los campos no esten vacios
 func validateEmptysPatient(patient *domain.Patient) (bool, error) {
 	if patient.Name == "" || patient.LastName == "" || patient.Address == "" || patient.DNI == "" || patient.DateUp == "" {
 		return false, errors.New("fields can't be empty")
