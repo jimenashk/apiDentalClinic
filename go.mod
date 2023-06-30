@@ -2,20 +2,12 @@ module apiDentalClinic
 
 go 1.20
 
-require (
-	github.com/gin-gonic/gin v1.9.1
-)
+require github.com/gin-gonic/gin v1.9.1
 
 require (
-	github.com/KyleBanks/depth v1.2.1 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.2 // indirect
-	github.com/go-openapi/jsonpointer v0.19.6 // indirect
-	github.com/go-openapi/jsonreference v0.20.2 // indirect
-	github.com/go-openapi/spec v0.20.9 // indirect
-	github.com/go-openapi/swag v0.22.4 // indirect
-	github.com/josharian/intern v1.0.0 // indirect
-	github.com/mailru/easyjson v0.7.7 // indirect
-	golang.org/x/tools v0.10.0 // indirect
+	github.com/kr/text v0.2.0 // indirect
+	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 )
 
 require (
